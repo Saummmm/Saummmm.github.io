@@ -1,0 +1,18 @@
+---
+type Props = {
+  title: string;
+  description: string;
+  meta?: string;
+  dialogId: string;
+};
+
+const { title, description, meta, dialogId } = Astro.props;
+---
+
+<article class="project-card" role="button" data-open-dialog={dialogId}>
+  <div class="project-card-content">
+    <h2 class="project-card-title">{title}</h2>
+    {meta ? <p class="project-card-meta">{meta}</p> : null}
+    <p class="project-card-description">{description}</p>
+  </div>
+</article>

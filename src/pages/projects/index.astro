@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../layouts/ProjectCard.astro";
+import ProjectModal from "../../layouts/ProjectModal.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+const sorted = projects.sort((a, b) => b.data.year - a.data.year);
+---
+
+<BaseLayout title="Projects">
+  <h1>Projects</h1>
+
+  {
+    sorted.map((p) => (
+      <>
+        <ProjectCard
+          title={p.data.title}
+          meta={`Area: ${p.data.area} · Status: ${p.data.status} · Year: ${p.data.year}`}
+          description={p.data.description}
+          dialogId={`modal-${p.slug}`}
+        />
+        <ProjectModal
+          id={`modal-${p.slug}`}
+          title={p.data.title}
+          meta={`Area: ${p.data.area} · Status: ${p.data.status} · Year: ${p.data.year}`}
+          sections={[
+            { heading: "Problem", text: p.data.modal.problem },
+            { heading: "Approach", text: p.data.modal.approach },
+            { heading: "Results", text: p.data.modal.results },
+            { heading: "Limitations", text: p.data.modal.limitations },
+          ]}
+          links={p.data.links ?? []}
+        />
+      </>
+    ))
+  }
+</BaseLayout>

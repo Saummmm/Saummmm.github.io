@@ -1,0 +1,266 @@
+html {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE / Edge (legacy) */
+}
+
+html::-webkit-scrollbar {
+    width: 0px;
+    /* Chrome, Safari, Edge */
+    height: 0px;
+}
+
+:root {
+    --importanttext: #dadadb;
+    --bg: #1d1e20;
+    /* --text: #666666; */
+    --text: #9b9c9d;
+    --border: #bababb;
+    --card-bg: #38373d;
+    --maxw: 942px;
+    --nav-width: 1024px;
+    --header-height: 60px;
+    --gap: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+body {
+    font-family: Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    line-height: 1.65;
+    font-size: 18px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+a:hover {
+    border-bottom: 1px solid var(--border);
+    border-bottom-color: var(--border);
+}
+
+.site-header {
+    /* border-bottom: 1px solid var(--border); */
+    background: var(--bg);
+}
+
+.nav {
+    color: var(--importanttext);
+    line-height: var(--header-height);
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin: auto auto;
+    padding: 18px 12px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    /* gap: 16px; */
+}
+
+.brand {
+    flex-wrap: inherit;
+    position: fixed;
+    left: calc((100vw - var(--maxw) - var(--gap) * 2)/2 - 138px);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-bottom: none;
+}
+
+.project-card {
+    display: block;
+    border-radius: 10px;
+    padding: 18px 18px;
+    margin: 18px 0;
+    background: var(--card-bg);
+    text-decoration: none;
+    transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px) scale(1.01) translateZ(0);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11),
+        0 10px 10px var(--bg);
+    border-bottom: none;
+}
+
+.project-card-title {
+    margin: 0 0 8px 0;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--importanttext);
+}
+
+.project-card-description {
+    margin: 0 0 10px 0;
+    color: var(--text);
+}
+
+.project-card-meta {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.75rem;
+}
+
+.modal {
+    border-radius: 16px;
+    padding: 0;
+    width: min(900px, calc(100vw - 32px));
+    background: var(--bg);
+    color: var(--text);
+}
+
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-inner {
+    padding: 18px 18px 20px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.modal-close {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+.modal-close:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.modal-meta {
+    margin: 0 0 12px 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.modal-content p {
+    margin: 0 0 14px 0;
+    color: var(--text);
+}
+
+.modal-links a {
+    margin-right: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.links a {
+    margin-left: 14px;
+}
+
+.content {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 28px 16px 48px;
+}
+
+.site-footer {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 18px 16px 28px;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sep {
+    color: var(--border);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--importanttext);
+    line-height: 1.25;
+    margin-top: 1.6em;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.35rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    margin: 0.9em 0;
+}
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95em;
+}
+
+pre {
+    padding: 14px;
+    border: 1px solid var(--border);
+    overflow: auto;
+}
+
+blockquote {
+    margin: 1.2em 0;
+    padding-left: 14px;
+    border-left: 3px solid var(--border);
+    color: var(--text);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2em 0;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+li {
+    margin: 0.35em 0;
+}

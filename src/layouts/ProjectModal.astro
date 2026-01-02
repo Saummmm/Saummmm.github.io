@@ -1,0 +1,48 @@
+---
+type Link = { label: string; href: string };
+type Section = { heading: string; text: string };
+
+type Props = {
+  id: string;
+  title: string;
+  meta?: string;
+  sections: Section[];
+  links?: Link[];
+};
+
+const { id, title, meta, sections, links = [] } = Astro.props;
+---
+
+<dialog class="modal" id={id}>
+  <div class="modal-inner">
+    <div class="modal-header">
+      <h2 class="modal-title">{title}</h2>
+      <button class="modal-close" type="button" data-close-dialog>Close</button>
+    </div>
+
+    {meta ? <p class="modal-meta">{meta}</p> : null}
+
+    <div class="modal-content">
+      {
+        sections.map((s) => (
+          <section class="modal-section">
+            <h3 class="modal-h">{s.heading}</h3>
+            <p class="modal-p">{s.text}</p>
+          </section>
+        ))
+      }
+    </div>
+
+    {
+      links.length ? (
+        <div class="modal-links">
+          {links.map((l) => (
+            <a href={l.href} target="_blank" rel="noreferrer">
+              {l.label}
+            </a>
+          ))}
+        </div>
+      ) : null
+    }
+  </div>
+</dialog>
