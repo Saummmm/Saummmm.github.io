@@ -6,4 +6,4 @@ description: About me.
 
 # About
 
-Add a short bio, current focus, and links to your resume and contact details.
+I am a Computer Science Master's student at the University of Windsor. I have a background in Software Engineering from Western University. 
