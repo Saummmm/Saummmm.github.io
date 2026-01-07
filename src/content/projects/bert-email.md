@@ -12,5 +12,5 @@ modal:
   future steps: Train model to accept new categories based on user preferences to add another label for the model to start classifying for. 
 links:
   - label: GitHub
-    href: https://github.com/YOUR_GITHUB_USERNAME/bert-email
+    href: https://github.com/Saummmm/BERT-Email-Classifier
 ---

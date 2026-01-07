@@ -12,5 +12,5 @@ modal:
   future steps: Generate simulated samples with an oversampling techniques such as SMOTE.
 links:
   - label: GitHub
-    href: https://github.com/YOUR_GITHUB_USERNAME/bert-email
+    href: https://github.com/Saummmm/Automating-Port-Operations
 ---

@@ -1,5 +1,5 @@
 ---
-title: Decoding Movie Sentiment Trends
+title: Fraud Detection with GNNs
 year: 2025
 area: GNN, Research Based
 status: Complete
@@ -12,5 +12,5 @@ modal:
   future steps: Perhaps taking an average, or a normalized count of the average sentiment on each movie, then an average of that of each movie genre. 
 links:
   - label: GitHub
-    href: https://github.com/YOUR_GITHUB_USERNAME/bert-email
+    href: https://github.com/Saummmm/Financial-Fraud-Detection-GNNs
 ---
