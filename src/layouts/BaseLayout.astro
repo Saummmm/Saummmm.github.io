@@ -24,6 +24,7 @@ const { title = "Saumya Buch", description = "" } = Astro.props;
             if (!(dlg instanceof HTMLDialogElement)) return;
 
             dlg.showModal();
+            document.body.classList.add("no-scroll");
 
             // close on backdrop click
             dlg.addEventListener(
@@ -45,6 +46,7 @@ const { title = "Saumya Buch", description = "" } = Astro.props;
           if (t.matches("[data-close-dialog]")) {
             const dlg = t.closest("dialog");
             if (dlg) dlg.close();
+            document.body.classList.remove("no-scroll");
           }
         });
       })();

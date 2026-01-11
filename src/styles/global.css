@@ -55,8 +55,6 @@ a {
     text-decoration: none;
 }
 
-
-
 a:hover {
     border-bottom: 1px solid var(--border);
     border-bottom-color: var(--border);
@@ -65,6 +63,10 @@ a:hover {
 .site-header {
     /* border-bottom: 1px solid var(--border); */
     background: var(--bg);
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 .nav {
@@ -128,11 +130,12 @@ a:hover {
     padding: 0;
     width: min(900px, calc(100vw - 32px));
     background: var(--bg);
-    color: var(--text);
+    border-color: var(--bg);
 }
 
 .modal::backdrop {
     background: rgba(0, 0, 0, 0.55);
+    overflow-y: hidden;
 }
 
 .modal-inner {
@@ -155,21 +158,25 @@ a:hover {
 }
 
 .modal-close {
-    border: 1px solid var(--border);
+    border: 1px solid var(--bg);
     background: transparent;
-    color: var(--muted);
+    color: var(--text);
     border-radius: 10px;
     padding: 8px 10px;
 }
 
 .modal-close:hover {
-    color: var(--text);
+    color: var(--importanttext);
     border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px) scale(1.01) translateZ(0);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11),
+        0 10px 10px var(--bg);
+    border-bottom: none;
 }
 
 .modal-meta {
     margin: 0 0 12px 0;
-    color: var(--muted);
+    color: var(--text);
     font-size: 0.95rem;
 }
 
@@ -181,6 +188,7 @@ a:hover {
 .modal-links a {
     margin-right: 14px;
     border-bottom: 1px solid var(--border);
+    color: var(--text);
 }
 
 .links a {
