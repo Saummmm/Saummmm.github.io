@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ProjectCard from "../../layouts/ProjectCard.astro";
-import ProjectModal from "../../layouts/ProjectModal.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../layouts/ProjectCard.astro";
+import ProjectModal from "../layouts/ProjectModal.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
@@ -29,6 +29,7 @@ const sorted = projects.sort((a, b) => b.data.year - a.data.year);
             { heading: "Approach", text: p.data.modal.approach },
             { heading: "Results", text: p.data.modal.results },
             { heading: "Limitations", text: p.data.modal.limitations },
+            { heading: "Future Work", text: p.data.modal["future-steps"] }
           ]}
           links={p.data.links ?? []}
         />

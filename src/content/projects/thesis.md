@@ -5,12 +5,12 @@ area: Deep Learning, Research, CAV
 status: In Progress
 description: Working on detecting misbehavior and malicious actors in secure VANETS.
 modal:
-  problem: "null"
-  approach: "null"
-  results: "null"
-  limitations: "null"
-  future steps: "null"
+  problem: ""
+  approach: ""
+  results: ""
+  limitations: ""
+  future-steps: ""
 links:
-  - label: "null"
-    href: "null"
+  - label: ""
+    href: ""
 ---

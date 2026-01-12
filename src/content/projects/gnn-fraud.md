@@ -9,8 +9,8 @@ modal:
   approach: "Three established GNN architectures were used Graph Convolutional Network, GAT, GraphSAGE. And then another published architecture was researched, studied and implemented ASA-GNN. A pipeline was created to transform the data using"
   results: The prediction of the next consecutive year's most popular movie had an accuracy of 78%. However, the RoBERTa model had a high accuracy in predicting the sentiment of each movie review.
   limitations: Limited by the number of movie genres. There was an imbalance in the number of genres, simulating this data would not be an accurate way to balance it out.  
-  future steps: Perhaps taking an average, or a normalized count of the average sentiment on each movie, then an average of that of each movie genre. 
+  future-steps: Perhaps taking an average, or a normalized count of the average sentiment on each movie, then an average of that of each movie genre. 
 links:
-  - label: GitHub
-    href: https://github.com/Saummmm/Financial-Fraud-Detection-GNNs
+  - label: "GitHub"
+    href: "https://github.com/Saummmm/Financial-Fraud-Detection-GNNs"
 ---

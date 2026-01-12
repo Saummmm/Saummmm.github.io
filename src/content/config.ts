@@ -13,8 +13,9 @@ const projects = defineCollection({
       approach: z.string(),
       results: z.string(),
       limitations: z.string(),
+      "future-steps": z.string(),
     }),
-    links: z.array(z.object({ label: z.string() })).optional(),
+    links: z.array(z.object({ label: z.string(), href: z.string() })).optional(),
   }),
 });
 
